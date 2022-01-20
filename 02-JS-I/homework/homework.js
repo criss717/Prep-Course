@@ -76,7 +76,7 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1.lenght == str2.lenght) {
+  if (str1.length === str2.length) {
     return true;
   } return false;
 }
@@ -94,7 +94,7 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (mayorQueCincuenta > 50) {
+  if (num > 50) {
     return true;
   } return false;
 }
@@ -110,14 +110,18 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
- 
+  if ( ((num/2) - Math.floor(num/2)) == 0) {
+    return true;
+  } return false;
 }
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if ( ((num/2) - Math.floor(num/2)) == 0) {
+    return false;
+  } return true;
 }
 
 function elevarAlCuadrado(num) {
@@ -180,40 +184,47 @@ function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+  agregarSimboloExclamacion = str + "!";
+  return agregarSimboloExclamacion;
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  
+  combinarNombres = nombre + " " + apellido;
+  return combinarNombres;
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  
+  obtenerSaludo = "Hola " + nombre + "!";
+  return obtenerSaludo;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  
+  obtenerAreaRectangulo = alto * ancho;
+  return obtenerAreaRectangulo;
 }
 
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  
+  retornarPerimetro = 4 * lado;
+  return retornarPerimetro;
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-
+areaDelTriangulo = (base * altura) / 2;
+return areaDelTriangulo;
 }
 
 
@@ -221,7 +232,8 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  
+  deEuroAdolar = euro * 1.2;
+  return deEuroAdolar; 
 }
 
 
@@ -231,7 +243,19 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  
+  if (letra.length > 1) {
+    return "Dato incorrecto";
+      } else if (letra =="a") {
+      return "Es vocal";
+     } else if (letra =="e") {
+      return "Es vocal";
+     } else if (letra =="i") {
+      return "Es vocal";
+     } else if (letra =="o") {
+      return "Es vocal";
+     } else if (letra =="u") {
+      return "Es vocal";
+     } return "Dato incorrecto";
 }
 
 
